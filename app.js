@@ -10,5 +10,5 @@ app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', routes); //whenever it receives a request from forward slash anything, use the routes file
-
+app.use(express.static('public'));
 module.exports = app; //export app variable so it can be imported and used in other files
